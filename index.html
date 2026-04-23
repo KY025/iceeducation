@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICE Education 主页</title>
+    <link rel="icon" type="image/webp"  href="images/favicon.webp"/>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+</head>
+
+<body> 
+    <div id="navbar"></div>
+
+    <section class="index-banner">
+        <img src="images/index-banner.webp" fetchpriority="high" alt="banner-image" class="banner-image">
+        <div class="container banner-container" data-aos="fade-up">
+            <div class="index-content">
+                <h1 class="banner-title">欢迎来到 ICE EDUCATION</h1>
+                <p class="banner-subtitle">让孩子梦想发光，智慧从这里启航</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-intro">
+        <div class="container intro-container" data-aos="fade-up">
+            <h2 class="intro-title">教育理念</h2>
+            <p class="intro-text">在 ICE Education，我们相信每个孩子都是独特的奇迹。7–12岁，是孩子开始探索世界、发现自我的关键时期。我们希望在这段黄金时光里，孩子们不仅学知识，更学会思考、热爱阅读、勇敢追梦、成为光，照亮自己和身边的人。</p>
+        </div>
+    </section>
+
+    <section class="index-programmes">
+        <div class="container programmes-container">
+            <h2 class="programmes-title">核心学术科目</h2>
+            <p class="subtitle">针对<strong> KSSR 和 UASA 标准 </strong>设计的教学内容</p>
+            
+            <div class="programmes-grid">
+                <div class="programme-card" data-aos="zoom-in" data-aos-delay="200" onclick="openGallery('国文', ['bm1.webp','bm2.webp','bm3.webp', 'bm4.webp','bm5.webp', 'bm6.webp'])">
+                    <div class="card-icon">BM</div>
+                    <h2>国文</h2>
+                    <span class="btn-explore">浏览</span>
+                </div>
+                <div class="programme-card" data-aos="zoom-in" data-aos-delay="300" onclick="openGallery('华文', ['bc1.webp','bc2.webp','bc3.webp', 'bc4.webp','bc5.webp', 'bc6.webp'])">
+                    <div class="card-icon">BC</div>
+                    <h2>华文</h2>
+                    <span class="btn-explore">浏览</span>
+                </div>
+                <div class="programme-card" data-aos="zoom-in" data-aos-delay="400" onclick="openGallery('英文', ['bi1.webp','bi2.webp','bi3.webp', 'bi4.webp','bi5.webp', 'bi6.webp'])">
+                    <div class="card-icon">BI</div>
+                    <h2>英文</h2>
+                    <span class="btn-explore">浏览</span>
+                </div>
+                <div class="programme-card" data-aos="zoom-in" data-aos-delay="500" onclick="openGallery('科学', ['sc1.webp','sc2.webp','sc3.webp', 'sc4.webp','sc5.webp'])">
+                    <div class="card-icon">SC</div>
+                    <h2>科学</h2>
+                    <span class="btn-explore">浏览</span>
+                </div>
+                <div class="programme-card" data-aos="zoom-in" data-aos-delay="600" onclick="openGallery('数学', ['mm1.webp','mm2.webp','mm3.webp', 'mm4.webp','mm5.webp', 'mm6.webp'])">
+                    <div class="card-icon">MM</div>
+                    <h2>数学</h2>
+                    <span class="btn-explore">浏览</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="galleryModal" class="gallery-modal" onclick="closeGallery()">
+        <span class="close-gallery">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3 id="galleryTitle" class="gallery-title"></h3>
+            <div class="gallery-images" id="galleryImages"></div>
+        </div>
+    </div>
+
+    <section class="index-testimony">
+        <div class="container testimony-container">
+            <h2 class="testimony-title">家长的心声</h2>            
+                <div class="testimony-grid">
+                    <div class="testimony-card" data-aos="fade-down">
+                        <div class="testimony-header">
+                            <i class="fa fa-quote-left"></i>
+                            <h4 class="parent-name">亮君妈妈</h4>
+                        </div>
+                        <p class="testimony-text">衷心感谢ICE Education老师们的用心栽培与辛勤付出。在老师们耐心细致的教导下，孩子们从不熟悉国语词汇到如今已经能掌握听、说、读、写的基本技能，学业也不断进步。同时，老师们也注重品格教育，使他们养成良好的行为和态度。</p>
+                    </div>
+
+                    <div class="testimony-card" data-aos="fade-down" data-aos-delay="200">
+                        <div class="testimony-header">
+                            <i class="fa fa-quote-left"></i>
+                            <h4 class="parent-name">以诺妈妈</h4>
+                        </div>
+                        <p class="testimony-text">当我回顾孩子在 ICE Education 的学习旅程时，才惊觉时间飞逝，转眼已走过三年。这段日子，不只是孩子学习成长的过程，更是身为父母安心与信任不断累积的过程。
+                            <br><br>作为四个孩子的母亲，我将孩子交托给中心，从放学接送、午餐安排到课业辅导与主科加强课程，一站式的系统让我非常放心。中心不仅在学业上提供有系统、有策略的教学，更在生活管理与安全方面做到细致周全，让孩子在一个有秩序、有温度的环境中成长。
+                            <br><br>我特别欣赏中心对孩子“身、心、灵”全面发展的重视。除了功课辅导，孩子也在群体生活中学习沟通、包容与合作，从原本内向或对学习缺乏信心，逐渐变得更积极、自律，也重新建立对学习的兴趣。
+                            <br><br>最让我感动的是，老师们的耐心与用心，真正看见每个孩子的需要，并一步步引导他们走回正确的学习轨道。
+                            <br><br>ICE Education 不只是补习中心，更像孩子的第二个家。感谢这一路的陪伴与付出，让孩子在小学阶段留下充实而温暖的成长回忆。
+                        </p>
+                    </div>
+
+                    <div class="testimony-card" data-aos="fade-down" data-aos-delay="400">
+                        <div class="testimony-header">
+                            <i class="fa fa-quote-left"></i>
+                            <h4 class="parent-name">Nathaniel 妈妈</h4>
+                        </div>
+                        <p class="testimony-text">环境很舒适，孩子在这里学习很开心，作为家长我很放心。这里的设施也非常齐全。</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+</body>
+</html>
